@@ -1,20 +1,10 @@
 # Basic Image Handling and Processing
 
-Esta primera tarea tiene que ver con familiarizarse con Python para el manejo básico de imágenes y su 
-procesamiento.
+Este repositorio se base en el libro de Jan Erik Solem "Programming Computer Vision with Python", en el que se han desarrollado dos ejercicios basado en los ejemplos del capítulo 1 del libro. Además se han desarrollado los dos primeros problemas propuestos que se encuentran al final del primer capítulo. Todo esto se ha desarrollado en Python con la herramienta de iPython notebook. 
 
-Deberán subir un archivo ``README.md`` (pueden usar este para iniciar) en dónde escriban la documentación del código que están adjuntando. En particular deben cumplir con lo siguiente:
+## Archivos
 
-1. Por lo menos dos programas en dónde utilicen código de ejemplo del capítulo 1 y modifiquen parámetros, cambien imágenes, etc. Las imágenes o archivos binarios que utilicen deben subirlas al repositorio también en una carpeta llamada ``data``.
-2. Deben resolver por lo menos los primeros dos ejercicios de final del capítulo. Deben llevar los nombres ``ch01-ex1.py`` y ``ch01-ex2.py``. 
-3. Bonificación por cualquier ejercicio o programa adicional.
-
-Ejemplo de la estructura del repositorio a subir
-
-	preliminares-JuanPerez/
-	.
-	├── README.md
-	├── ch01-ex1.py
-	├── ch01-ex2.py
-	├── data
-	│   ├── image.jpg
+* ``ch01-ex1.ipynb`` En este archivo se propone una solución al primer problema propuesto del capítulo 1, en el cual se pide tomar una imagen y aplicar un filtro Gaussiano con diferentes valores de $\sigma$ y así explicar que pasa con la imagen de salida y con los contornos de esta a medida que el valor de $\sigma$ aumenta.
+* ``ch01-ex2.ipynb`` Se da solución al segundo problema propuesto del capítulo 1, en el que se pide implementar un filtro de realce a una imagen de prueba. Para esto se ha usado la librería scipy el cual posee un módulo para aplicar un filtro Gaussiano el cual es necesario según las instrucciones dadas en: http://en.wikipedia.org/wiki/Unsharp_masking.
+* ``ch01_example1.ipynb`` En este caso se desarrolla uno de los ejemplos expuestos por el libro a lo largo del capítulo 1, el cual consiste en calcular la derivada de una imagen usando la convolución entre la imagen de entrada y un filtro Sobel. Para el calculo de esta convolución se ha creado una función capaz de calular la convolución valida entre la imagen y el kernel.
+* ``ch01_example2.ipynb`` Basandonos en la función de convolución expuesta en el archivo ``ch01_example1.ipynb`` se propone un método capaz de calcular las derivadas en una imagen, pero siendo ya más robustos al tema del ruido de la imagen de entrada. para esto se convoluciona la imagen con un kernel producto de la derivada de una función Gaussiana.
